@@ -8,7 +8,7 @@ public class Demo {
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        CustomerService customerService = applicationContext.getBean("customerService", CustomerService.class);
+        CustomerService customerService = applicationContext.getBean(CustomerService.class);
 
         String firstname = customerService.findAll().get(0).getFirstname();
         System.out.println(firstname);
